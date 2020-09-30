@@ -31,9 +31,10 @@ resource "aws_instance" "web" {
 resource "aws_db_instance" "web_db" {
   allocated_storage = 8
   engine = "mysql"
-  engine_version = "5.6.35"
+  engine_version = "8.0.20"
   instance_class = "db.t2.micro"
+  db_subnet_group_name = "default-vpc-06feb5580103e168a"
   username = "admin"
-  password = "temp"
+  password = "temp_password"
   skip_final_snapshot = true
 }
